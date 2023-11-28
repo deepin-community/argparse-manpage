@@ -1,15 +1,22 @@
-Source: template-repository
-Section: unknown
+Source: argparse-manpage
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@lists-alioth.debian.net>
+Uploaders: Timo Aaltonen <tjaalton@debian.org>
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper (>= 12),
+ dh-python,
+ python3-all,
+ python3-setuptools,
+ python3-six,
+Standards-Version: 4.4.0
+Homepage: http://github.com/praiskup/argparse-manpage
+Vcs-Git: https://salsa.debian.org/freeipa-team/argparse-manpage.git
+Vcs-Browser: https://salsa.debian.org/freeipa-team/argparse-manpage
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-argparse-manpage
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends},
+Description: Automatically build a manpage from argparse
+ Generate a manual page in an automatic way from an ArgumentParser object,
+ so that the manpage matches to the automatically generated --help output.
